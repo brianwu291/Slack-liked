@@ -7,6 +7,7 @@ import MessagesHeader from './MessagesHeader';
 import MessagesForm from './MessagesForm';
 import Message from './Message';
 import Typing from './Typing';
+import Skeleton from './Skeleton'
 
 class Messages extends React.Component {
   state = {
@@ -28,12 +29,22 @@ class Messages extends React.Component {
     connectRef: firebase.database().ref('.info/connected')
   }
 
-  componentDidMount(){
+  componentDidMount() {
     const { user, channel } = this.state;
     if (user && channel) {
       this.addListeners(channel.id);
       this.addUserStarsListener(channel.id, user.uid);
     }
+  }
+
+  componentDidUpdate(preProps, preState) {
+    if (this.messagesEnd) {
+      this.scrollToBottom();
+    }
+  }
+
+  scrollToBottom = () => {
+    this.messagesEnd.scrollIntoView({ behavior: 'smooth' });
   }
 
   addUserStarsListener = (channelId, userId) => {
@@ -216,8 +227,31 @@ class Messages extends React.Component {
     ))
   }
 
+  displayMessagesSkeleton = loading => loading ? (
+      <React.Fragment>
+        {[...Array(10)].map((_, idx) => (
+          <Skeleton
+            key={idx}
+          />
+        ))}
+      </React.Fragment>
+    ) : null
+
   render(){
-    const { messagesRef, messages, channel, user, numUniqueUsers, searchTerm, searchResult, searchLoading, privateChannel, isChannelStarred, typingUsers } = this.state;
+    const {
+      messagesRef,
+      messages,
+      channel,
+      user,
+      numUniqueUsers,
+      searchTerm,
+      searchResult,
+      searchLoading,
+      privateChannel,
+      isChannelStarred,
+      typingUsers,
+      messagesLoading,
+    } = this.state;
     return (
       <React.Fragment>
         <MessagesHeader
@@ -231,10 +265,12 @@ class Messages extends React.Component {
         
         <Segment>
           <Comment.Group className='messages'>
+            {this.displayMessagesSkeleton(messagesLoading)}
             {searchTerm ?
               this.displayMessages(searchResult) :
               this.displayMessages(messages)}
-            {displayTypingUsers(typingUsers)}
+            {this.displayTypingUsers(typingUsers)}
+            <div ref={node => (this.messagesEnd = node)}></div>
           </Comment.Group>
         </Segment>
         

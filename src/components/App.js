@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Grid } from 'semantic-ui-react';
-import ColorPanel from './colorPanel/ColorPanel';
-import SidePanel from './sidePanel/SidePanel';
-import Messages from './messages/Messages';
-import MetaPanel from './metaPanel/MetaPanel';
+import ColorPanel from './ColorPanel';
+import SidePanel from './SidePanel';
+import Messages from './Messages';
+import MetaPanel from './MetaPanel';
 import './css/App.css';
 
 const App = ({ currentUser, currentChannel, isPrivateChannel, userPosts, primaryColor, secondaryColor }) => {
