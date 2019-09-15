@@ -11,7 +11,7 @@ class FileModal extends React.Component {
   addFile = e => {
     const file = e.target.files[0];
     if (file) {
-      this.setState({ ...this.state, file });
+      this.setState({ file });
     }
   }
 
@@ -19,7 +19,7 @@ class FileModal extends React.Component {
     this.state.authorized.includes(mime.lookup(filename))
   );
 
-  clearFile = () => this.setState({ ...this.state, file: null });
+  clearFile = () => this.setState({ file: null });
 
   sendFile = () => {
     const { file } = this.state;

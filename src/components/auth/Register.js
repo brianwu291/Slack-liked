@@ -22,11 +22,11 @@ class Register extends React.Component {
   isPasswordValid = ({ password, passwordConfirmation }) => {
     if (password.length < 6 || passwordConfirmation.length < 6) {
       return false;
-    } else if (password !== passwordConfirmation) {
-      return false;
-    } else{
-      return true;
     }
+    if (password !== passwordConfirmation) {
+      return false;
+    }
+    return true;
   }
 
   isFormValid = () => {
@@ -34,16 +34,16 @@ class Register extends React.Component {
     if (this.isFormEmpty(this.state)) {
       // throw error 
       error = { message: 'Fill In All Fields!' };
-      this.setState({ ...this.state, errors: errors.concat(error) });
+      this.setState({ errors: errors.concat(error) });
       return false;
-    } else if (!this.isPasswordValid(this.state)) {
+    }
+    if (!this.isPasswordValid(this.state)) {
       // throw error
       error = { message: 'Password Is Invalid!' };
-      this.setState({...this.state, errors: errors.concat(error) });
+      this.setState({ errors: errors.concat(error) });
       return false;
-    } else {
-      return true;
     }
+    return true;
   }
 
   displayErrors = errors => errors.map(
@@ -52,9 +52,7 @@ class Register extends React.Component {
 
   handleChange = e => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value, 
-    });
+    this.setState({ [name]: value });
   };
 
   saveUser = ({ user }) => {
@@ -67,7 +65,7 @@ class Register extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     if (this.isFormValid()) {
-      this.setState({ ...this.state, errors: [], loading: true });
+      this.setState({ errors: [], loading: true });
       const { email, password } = this.state;
       firebase.auth().createUserWithEmailAndPassword(email, password)
         .then(createdUser => {
@@ -87,8 +85,7 @@ class Register extends React.Component {
           })
           .catch(err => {
             console.log(err);
-            this.setState({ 
-              ...this.satate, 
+            this.setState({
               errors: this.state.errors.concat(err),
               loading: false 
             })
@@ -96,7 +93,7 @@ class Register extends React.Component {
         })
         .catch(err => {
           console.log(err);
-          this.setState({ ...this.state, errors: this.state.errors.concat(err), loading: false });
+          this.setState({ errors: this.state.errors.concat(err), loading: false });
         })
     }
   };

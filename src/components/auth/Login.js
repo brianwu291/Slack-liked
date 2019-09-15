@@ -17,9 +17,7 @@ class Login extends React.Component {
 
   handleChange = e => {
     const { name, value } = e.target;
-    this.setState({
-      [name]: value, 
-    });
+    this.setState({ [name]: value });
   };
 
   isFormValid = ({ email, password }) => email && password;
@@ -37,8 +35,7 @@ class Login extends React.Component {
         })
         .catch(err => {
           console.log(err);
-          this.setState({ 
-            ...this.state, 
+          this.setState({
             errors: this.state.errors.concat(err),
             loading: false
           });
