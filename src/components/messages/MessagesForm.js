@@ -137,7 +137,7 @@ class MessageForm extends React.Component {
 
   getPath = () => {
     if (this.props.isPrivateChannel) {
-      return `chat/private-${this.state.channel.id}`;
+      return `chat/private/${this.state.channel.id}`;
     } else {
       return "chat/public";
     }
@@ -160,6 +160,7 @@ class MessageForm extends React.Component {
             const percentUploaded = Math.round(
               (snap.bytesTransferred / snap.totalBytes) * 100
             );
+            this.closeModal();
             this.setState({ percentUploaded });
           },
           err => {

@@ -34,7 +34,7 @@ class UserPanel extends React.Component {
     }
   }
 
-  handleCroppImage = () => {
+  handleCroppedImage = () => {
     if (this.avatarEditor) {
       this.avatarEditor.getImageScaledToCanvas().toBlob(blob => {
         let imageURL = URL.createObjectURL(blob);
@@ -49,7 +49,7 @@ class UserPanel extends React.Component {
   uploadCroppedImage = () => {
     const { blob, storageRef, userRef, metadata } = this.state;
     storageRef
-      .child(`avatar/user-${userRef.uid}`)
+      .child(`avatar/users/${userRef.uid}`)
       .put(blob, metadata)
       .then(snap => {
         snap.ref.getDownloadURL().then(downloadURL => {
@@ -66,7 +66,7 @@ class UserPanel extends React.Component {
         photoURL: this.state.uploadedCroppedImage
       })
       .then(() => {
-        console.log('photo url updated!');
+        // console.log('photo url updated!');
         this.closeModal();
       })
       .catch(err => {
@@ -84,7 +84,7 @@ class UserPanel extends React.Component {
       })
   }
 
-  handleSignout = () => {
+  handleSignOut = () => {
     firebase.auth().signOut()
       .then(() => console.log('sign out!'))
   }
@@ -100,8 +100,8 @@ class UserPanel extends React.Component {
       text: <span onClick={this.openModal}>Change Avatar</span>
     },
     {
-      key: 'signout',
-      text: <span onClick={this.handleSignout}>Sign Out</span>
+      key: 'signOut',
+      text: <span onClick={this.handleSignOut}>Sign Out</span>
     }
   ];
 
@@ -174,7 +174,7 @@ class UserPanel extends React.Component {
             <Button color="green" inverted onClick={this.uploadCroppedImage}>
               <Icon name="save" /> Change Avatar
             </Button>}
-            <Button color="green" inverted onClick={this.handleCroppImage}>
+            <Button color="green" inverted onClick={this.handleCroppedImage}>
               <Icon name="image" /> Preview
             </Button>
             <Button color="red" inverted onClick={this.closeModal}>
