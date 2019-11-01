@@ -10,10 +10,7 @@
 /build
 
 # firebase stuff
-.firebaserc
-database.rules.json
-firebase.json
-storage.rules
+/rules
 
 # misc
 .DS_Store
