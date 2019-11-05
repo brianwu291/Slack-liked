@@ -562,3 +562,183 @@ patch:
         patched: '2019-11-05T08:37:09.886Z'
     - react-scripts > jest > jest-cli > istanbul-lib-instrument > babel-template > babel-traverse > lodash:
         patched: '2019-11-05T08:37:09.886Z'
+    - react-scripts > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > optimize-css-assets-webpack-plugin > last-call-webpack-plugin > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > @svgr/webpack > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > babel-preset-react-app > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > babel-jest > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runtime > jest-config > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-config > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > babel-jest > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > jest-runtime > jest-config > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-environment-node > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-environment-jsdom > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-jasmine2 > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > babel-jest > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-jasmine2 > jest-runtime > jest-config > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > jest-environment-jsdom > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-jasmine2 > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-config > babel-jest > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > jest-jasmine2 > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > eslint-plugin-import > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > jest-environment-node > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runtime > jest-config > jest-jasmine2 > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > jest-jasmine2 > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-environment-node > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runtime > jest-config > jest-environment-node > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-jasmine2 > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runtime > jest-config > jest-environment-jsdom > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-environment-jsdom > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-config > jest-jasmine2 > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > jest-runtime > jest-config > jest-environment-jsdom > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > jest-environment-jsdom > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-config > @jest/test-sequencer > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > jest-runtime > jest-config > jest-environment-node > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > jest-runtime > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > jest-environment-node > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-runtime > jest-config > jest-jasmine2 > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runtime > jest-config > @jest/test-sequencer > jest-runner > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > jest-runtime > jest-config > jest-jasmine2 > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-jasmine2 > jest-runtime > jest-config > babel-jest > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > jest-runtime > jest-config > @jest/test-sequencer > jest-runner > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > jest-runtime > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-jasmine2 > jest-runtime > jest-config > jest-environment-node > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runtime > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > jest-runner > jest-jasmine2 > jest-runtime > jest-config > jest-environment-jsdom > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
+    - react-scripts > jest > jest-cli > @jest/core > @jest/reporters > jest-runtime > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > @jest/environment > @jest/transform > @babel/core > lodash:
+        patched: '2019-11-05T08:40:35.604Z'
