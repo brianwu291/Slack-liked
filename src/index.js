@@ -28,8 +28,8 @@ const mapStateToProps = ({ user }) => ({
   isLoading: user.isLoading
 })
 
-const withConnect = connect(mapStateToProps, { setUser, clearUser })(withUseCheckUer(Root))
-const RootWithAuth = withRouter(withConnect)
+const RootWithConnect = connect(mapStateToProps, { setUser, clearUser })(withUseCheckUer(Root))
+const RootWithAuth = withRouter(RootWithConnect)
 
 ReactDOM.render(
   <Provider store={store}>
