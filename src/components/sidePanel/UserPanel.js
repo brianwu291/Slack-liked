@@ -1,7 +1,7 @@
-import React from 'react';
-import AvatarEditor from 'react-avatar-editor';
-import { Grid, Header, Icon, Dropdown, Image, Modal, Input, Button } from 'semantic-ui-react';
-import firebase from '../../firebase';
+import React from 'react'
+import AvatarEditor from 'react-avatar-editor'
+import { Grid, Header, Icon, Dropdown, Image, Modal, Input, Button } from 'semantic-ui-react'
+import firebase from '../../firebase'
 
 class UserPanel extends React.Component {
   state = {
@@ -19,45 +19,45 @@ class UserPanel extends React.Component {
     }
   }
 
-  openModal = () => this.setState({ modal: true });
+  openModal = () => this.setState({ modal: true })
 
-  closeModal = () => this.setState({ modal: false });
+  closeModal = () => this.setState({ modal: false })
 
   handleFileChange = e => {
-    const file = e.target.files[0];
-    const reader = new FileReader();
+    const file = e.target.files[0]
+    const reader = new FileReader()
     if (file) {
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(file)
       reader.addEventListener('load', () => {
-        this.setState({ previewImage: reader.result });
-      });
+        this.setState({ previewImage: reader.result })
+      })
     }
   }
 
   handleCroppedImage = () => {
     if (this.avatarEditor) {
       this.avatarEditor.getImageScaledToCanvas().toBlob(blob => {
-        let imageURL = URL.createObjectURL(blob);
+        let imageURL = URL.createObjectURL(blob)
         this.setState({
           croppedImage: imageURL,
           blob
-        });
-      });
+        })
+      })
     }
   }
 
   uploadCroppedImage = () => {
-    const { blob, storageRef, userRef, metadata } = this.state;
+    const { blob, storageRef, userRef, metadata } = this.state
     storageRef
       .child(`avatar/users/${userRef.uid}`)
       .put(blob, metadata)
       .then(snap => {
         snap.ref.getDownloadURL().then(downloadURL => {
           this.setState({ uploadedCroppedImage: downloadURL }, () => {
-            this.changeAvatar();
-          });
+            this.changeAvatar()
+          })
         })
-      });
+      })
   }
 
   changeAvatar = () => {
@@ -77,10 +77,10 @@ class UserPanel extends React.Component {
       .child(this.state.user.uid)
       .update({ avatar: this.state.uploadedCroppedImage })
       .then(() => {
-        console.log('user avatar updated!');
+        console.log('user avatar updated!')
       })
       .catch(err => {
-        console.log(err);
+        console.log(err)
       })
   }
 
@@ -106,8 +106,8 @@ class UserPanel extends React.Component {
   ];
 
   render(){
-    const { user, modal, previewImage, croppedImage } = this.state;
-    const { primaryColor } = this.props;
+    const { user, modal, previewImage, croppedImage } = this.state
+    const { primaryColor } = this.props
     return (
       <Grid style={{ background: primaryColor }}>
         <Grid.Column>
@@ -188,4 +188,4 @@ class UserPanel extends React.Component {
   }
 }
 
-export default UserPanel;
+export default UserPanel

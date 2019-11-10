@@ -14,9 +14,9 @@ const enhance = compose(
 )
 
 const MetaPanel = ({ currentChannel, userPosts, activeIndex, changeActiveIndex }) => {
-  const renderTopPosterLists = userPosts => (
-    Object.entries(userPosts)
-      .sort((a, b) => b[1] - a[1])
+  const renderTopPosterLists = userPosts => {
+    return Object.entries(userPosts)
+      .sort((a, b) => b[1]['count'] - a[1]['count'])
       .map(([key, val], ind) => (
         <React.Fragment key={ind}>
            <TopPosterItem
@@ -27,7 +27,7 @@ const MetaPanel = ({ currentChannel, userPosts, activeIndex, changeActiveIndex }
         </React.Fragment>
       ))
       .slice(0, 5)
-  )
+  }
   const accordionInfo = [
     {
       renderTitle: () => (

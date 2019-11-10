@@ -1,13 +1,13 @@
-import React from 'react';
-import { Menu } from 'semantic-ui-react';
-import UserPanel from './UserPanel';
-import Channels from './Channels';
-import Starred from './Starred';
-import DirectMessages from './DirectMessages';
+import React from 'react'
+import { Menu } from 'semantic-ui-react'
+import UserPanel from './UserPanel'
+import Channels from './Channels'
+import Starred from './Starred'
+import DirectMessages from './DirectMessages'
 
 class SidePanel extends React.Component {
   render(){
-    const { currentUser, primaryColor } = this.props;
+    const { currentUser, primaryColor } = this.props
     return (
       <Menu
         size="large"
@@ -22,8 +22,8 @@ class SidePanel extends React.Component {
         <Channels currentUser={currentUser}/>
         <DirectMessages currentUser={currentUser}/>
       </Menu>
-    );
+    )
   }
 }
 
-export default SidePanel;
+export default SidePanel
