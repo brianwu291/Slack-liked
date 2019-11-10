@@ -5,7 +5,7 @@ const Spinner = () => (
   <Dimmer active>
     <Loader 
       size="huge"
-      content={"Preparing Chat..."}/>
+      content={"準備中..."}/>
   </Dimmer>
 )
 

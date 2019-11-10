@@ -1,100 +1,100 @@
-import React from 'react';
-import { Segment, Accordion, Header, Icon, Image, List } from 'semantic-ui-react';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { compose } from 'recompose'
+import { Segment, Header, Accordion, Icon, Image, List } from 'semantic-ui-react'
+import { renderNothingWhileTrue } from '../../hocUtils'
+import withActiveIndexChange from './components/withActiveIndexChange'
+import TopPosterItem from './components/TopPosterItem'
+import AccordionItem from './components/AccordionItem'
 
-class MetaPanel extends React.Component {
-  state = {
-    activeIndex: 0,
-    channel: this.props.currentChannel,
-    privateChannel: this.props.isPrivateChannel
-  };
+const getIsPrivateChannel = props => props.isPrivateChannel
+const enhance = compose(
+  renderNothingWhileTrue(getIsPrivateChannel),
+  withActiveIndexChange
+)
 
-  setActiveIndex = (e, titleProps) => {
-    const { index } = titleProps;
-    const { activeIndex } = this.state;
-    const newIndex = activeIndex === index ? -1 : index;
-    this.setState({ activeIndex: newIndex });
-  }
-
-  formatCount = num => {
-    return num === 1 ? `${num} message` : `${num} messages`
-  }
-
-  displayTopPosters = userPosts => (
+const MetaPanel = ({ currentChannel, userPosts, activeIndex, changeActiveIndex }) => {
+  const renderTopPosterLists = userPosts => (
     Object.entries(userPosts)
       .sort((a, b) => b[1] - a[1])
       .map(([key, val], ind) => (
-        <List.Item 
-          key={ind}>
-          <Image avatar src={val.avatar}/>
-          <List.Content>
-            <List.Header as="a">
-              {key}
-            </List.Header>
-            <List.Description>
-              {this.formatCount(val.count)}
-            </List.Description>
-          </List.Content>
-        </List.Item>
+        <React.Fragment key={ind}>
+           <TopPosterItem
+             userName={key}
+             imgUrl={val.avatar}
+             count={val.count}
+           />
+        </React.Fragment>
       ))
       .slice(0, 5)
-  );
-
-  render(){
-    const { activeIndex, privateChannel, channel } = this.state;
-    const { userPosts } = this.props;
-
-    if (privateChannel) return null;
-
-    return (
-      <Segment loading={!channel}>
-        <Header as="h3" attached="top">
-          About # {channel && channel.name}
+  )
+  const accordionInfo = [
+    {
+      renderTitle: () => (
+        <React.Fragment>
+          <Icon name="dropdown" />
+          <Icon name="info" />
+          {'頻道簡介'}
+        </React.Fragment>
+      ),
+      renderContent: () => currentChannel && currentChannel.details,
+    },
+    {
+      renderTitle: () => (
+        <React.Fragment>
+          <Icon name="dropdown" />
+          <Icon name="info" />
+          {'最多互動'}
+        </React.Fragment>
+      ),
+      renderContent: () => (
+        <List>
+          {userPosts && renderTopPosterLists(userPosts)}
+        </List>
+      ),
+    },
+    {
+      renderTitle: () => (
+        <React.Fragment>
+          <Icon name="dropdown" />
+          <Icon name="pencil alternate" />
+          {'頻道主人'}
+        </React.Fragment>
+      ),
+      renderContent: () => (
+        <Header as="h3">
+          <Image circular src={currentChannel && currentChannel.createdBy.avatar}/>
+          {currentChannel && currentChannel.createdBy.name}
         </Header>
-        <Accordion styled attached="true">
-          <Accordion.Title
-            active={activeIndex === 0}
-            index={0}
-            onClick={this.setActiveIndex}>
-            <Icon name="dropdown"/>
-            <Icon name="info"/>
-            Channel Details
-          </Accordion.Title>
-          <Accordion.Content active={activeIndex === 0}>
-            {channel && channel.details}
-          </Accordion.Content>
-
-          <Accordion.Title
-            active={activeIndex === 1}
-            index={1}
-            onClick={this.setActiveIndex}>
-            <Icon name="dropdown"/>
-            <Icon name="info"/>
-            Top Posters
-          </Accordion.Title>
-          <Accordion.Content active={activeIndex === 1}>
-            <List>
-              {userPosts && this.displayTopPosters(userPosts)}
-            </List>
-          </Accordion.Content>
-
-          <Accordion.Title
-            active={activeIndex === 2}
-            index={2}
-            onClick={this.setActiveIndex}>
-            <Icon name="dropdown"/>
-            <Icon name="pencil alternate"/>
-            CreatedBy
-          </Accordion.Title>
-          <Accordion.Content active={activeIndex === 2}>
-            <Header as="h3">
-              <Image circular src={channel && channel.createdBy.avatar}/>
-              {channel && channel.createdBy.name}
-            </Header>
-          </Accordion.Content>
-        </Accordion>
-      </Segment>
-    );
-  }
+      ),
+    },
+  ]
+  return (
+    <Segment loading={!currentChannel}>
+      <Header as="h3" attached="top">
+        {'關於 #'}{currentChannel && currentChannel.name}
+      </Header>
+      <Accordion styled attached="true">
+        {accordionInfo.map((info, ind) => (
+          <AccordionItem
+            key={ind}
+            index={ind}
+            isActive={activeIndex === ind}
+            changeActiveIndex={changeActiveIndex}
+            renderTitle={info.renderTitle}
+            renderContent={info.renderContent}
+          />
+        ))}
+      </Accordion>
+    </Segment>
+  )
 }
 
-export default MetaPanel;
+MetaPanel.propTypes = {
+  currentChannel: PropTypes.object,
+  userPosts: PropTypes.object,
+  activeIndex: PropTypes.number,
+  changeActiveIndex: PropTypes.func,
+}
+
+export default enhance(MetaPanel)

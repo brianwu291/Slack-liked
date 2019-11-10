@@ -92,16 +92,16 @@ class UserPanel extends React.Component {
   dropdownOptions = () => [
     {
       key: 'user',
-      text: <span>Signed In As <strong>{this.props.currentUser.displayName}</strong></span>,
+      text: <span>{`以 `}<strong>{this.props.currentUser.displayName}</strong>{` 身份登入`}</span>,
       disabled: true
     },
     {
       key: 'avatar',
-      text: <span onClick={this.openModal}>Change Avatar</span>
+      text: <span onClick={this.openModal}>更換頭貼</span>
     },
     {
       key: 'signOut',
-      text: <span onClick={this.handleSignOut}>Sign Out</span>
+      text: <span onClick={this.handleSignOut}>登出</span>
     }
   ];
 
@@ -116,7 +116,7 @@ class UserPanel extends React.Component {
             <Header inverted floated="left" as="h2">
               <Icon name="code"/>
               <Header.Content>
-                Slack
+                聊天室
               </Header.Content>
             </Header>
 
@@ -136,13 +136,13 @@ class UserPanel extends React.Component {
 
         {/** change User Avatar Modal */}
         <Modal basic open={modal} onClose={this.closeModal}>
-          <Modal.Header>Change Avatar</Modal.Header>
+          <Modal.Header>頭貼更換</Modal.Header>
           <Modal.Content>
             <Input
               onChange={this.handleFileChange}
               fluid
               type="file"
-              label="New Avatar"
+              label="上傳新頭貼"
               name="previewImage"/>
             <Grid centered stackable columns={2}>
               <Grid.Row centered>
@@ -172,13 +172,13 @@ class UserPanel extends React.Component {
           <Modal.Actions>
             {croppedImage &&
             <Button color="green" inverted onClick={this.uploadCroppedImage}>
-              <Icon name="save" /> Change Avatar
+              <Icon name="save" /> 頭貼更換
             </Button>}
             <Button color="green" inverted onClick={this.handleCroppedImage}>
-              <Icon name="image" /> Preview
+              <Icon name="image" /> 預覽
             </Button>
             <Button color="red" inverted onClick={this.closeModal}>
-              <Icon name="remove"/> Cancel
+              <Icon name="remove"/> 取消
             </Button>
           </Modal.Actions>
         </Modal>

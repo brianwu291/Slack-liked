@@ -4,7 +4,7 @@ const initialChannelState = {
   currentChannel: null,
   isPrivateChannel: false,
   userPosts: null
-}; 
+}
 
 export const channelReducer = (state = initialChannelState, action) => {
   switch (action.type) {
