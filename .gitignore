@@ -8,7 +8,7 @@
 
 # production
 /build
-/.firebase
+/.firebase 
 
 # firebase stuff
 /rules
