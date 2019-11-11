@@ -9,3 +9,9 @@ Deploy Command:
 $ firebase login
 $ firebase deploy
 ```
+
+```
+測試登入帳號：
+email: testwoohoo@gmail.com
+password: aa12345
+```
