@@ -246,7 +246,7 @@ class Messages extends React.Component {
   }
 
   displayTypingUsers = users => {
-    users.length > 0 && users.map(user => (
+    return users.length > 0 && users.map(user => (
       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '.2em' }} key={user.id}>
         <span className="user__typing">{user.name} is typing</span><Typing />
       </div>
