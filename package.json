@@ -21,13 +21,16 @@
     "redux-devtools-extension": "^2.13.5",
     "semantic-ui-css": "2.4.1",
     "semantic-ui-react": "0.88.1",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "browserslist": {
     "production": [
@@ -44,5 +47,6 @@
   "devDependencies": {
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1"
-  }
+  },
+  "snyk": true
 }
